@@ -13,6 +13,10 @@ class Scoreboard(Turtle):
         self.write(f"Your Score: {self.score}", align= ALIGNMENT, font= FONT)
         self.hideturtle()
     
+    def game_over(self):
+        self.goto(0, 0)
+        self.write(f"Game Over! Your final Score: {self.score}", align= ALIGNMENT, font= FONT)
+    
     def plus_score(self):
         self.clear()
         self.score +=1
