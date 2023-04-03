@@ -23,3 +23,5 @@ class Scoreboard(Turtle):
         self.write(f"Your Score: {self.score}", align= "center", font=("Arial", 15, "normal"))
 
 
+
+
