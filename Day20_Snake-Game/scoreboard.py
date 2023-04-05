@@ -8,19 +8,29 @@ class Scoreboard(Turtle):
         super().__init__()
         self.color("white")
         self.score = 0
+        with open("Day20_Snake-Game\data.txt") as data:
+            self.high_score = int(data.read())
         self.penup()
         self.goto(0, 270)
-        self.write(f"Your Score: {self.score}", align= ALIGNMENT, font= FONT)
         self.hideturtle()
+        self.update_scoreboard()
     
-    def game_over(self):
-        self.goto(0, 0)
-        self.write(f"Game Over! Your final Score: {self.score}", align= ALIGNMENT, font= FONT)
-    
-    def plus_score(self):
+    def update_scoreboard(self):
         self.clear()
+        self.write(f"Your Score: {self.score} High score: {self.high_score}", align= "center", font=("Arial", 15, "normal"))
+
+    def reset(self):
+
+        if self.score > self.high_score:
+            self.high_score = self.score
+            with open("Day20_Snake-Game\data.txt", mode= "w") as data:
+                data.write(str(self.score))
+        self.score = 0
+        self.update_scoreboard()
+
+    def plus_score(self):
         self.score +=1
-        self.write(f"Your Score: {self.score}", align= "center", font=("Arial", 15, "normal"))
+        self.update_scoreboard()
 
 
 
