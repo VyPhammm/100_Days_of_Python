@@ -1,9 +1,6 @@
 import requests
 from datetime import datetime
-
-USERNAME = "phamvy"
-TOKEN = "adasdgqwydbasc1"
-GRAPH_ID = "graph12"
+from config import USERNAME, TOKEN, GRAPH_ID
 
 pixela_endpoint = "https://pixe.la/v1/users"
 
@@ -31,7 +28,6 @@ graph_config = {
 headers = {
     "X-USER-TOKEN": TOKEN
 }
-
 # response = requests.post(url=graph_endpoint, json=graph_config, headers=headers)
 # print(response.text)
 
