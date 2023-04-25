@@ -11,5 +11,7 @@ header= {
 
 response= requests.get(URL, headers= header)
 
-soup= BeautifulSoup(response.content, "lxml")
-print(soup.prettify())
+soup= BeautifulSoup(response.text, "lxml")
+# print(soup.prettify())
+price = soup.find(class_="a-price aok-align-center reinventPricePriceToPayMargin priceToPay", data-a-color="base")
+print(price)
