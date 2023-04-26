@@ -1,0 +1,5 @@
+PROMISED_DOWN = 100 
+PROMISED_UP = 10
+CHROME_DRIVER_PATH = "Your path"
+TWITTER_EMAIL = "Your email"
+TWITTER_PASSWORD = "Your Password"
