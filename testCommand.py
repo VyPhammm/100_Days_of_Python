@@ -16,7 +16,6 @@ def firstRepeatedChar(str):
         # Add ch to hash
         else:
             h[ch] = 0
- 
-    return ''
+            print(h)
 # Driver code
-print(firstRepeatedChar("geeksforgeeks"))
+print(firstRepeatedChar("gegeksforgeeks"))
